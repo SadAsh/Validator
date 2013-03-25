@@ -1,0 +1,26 @@
+/* 
+    Document   : main
+    Created on : 25.03.2013, 22:56:20
+    Author     : Администратор
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.left{
+    float: left;
+}
+
+#cookies_input{
+    display: none;
+}
+
+.clr{
+    clear: both;
+}
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-left: 5px;
+    margin-top: 0;
+  }
+
