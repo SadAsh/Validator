@@ -9,14 +9,9 @@
         <link rel="stylesheet" type="text/css" media="screen" href="/css/datepicker.css" />
         <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>  
         <script type="text/javascript" src="/js/bootstrap-datepicker.js"></script>  
+        <script type="text/javascript" src="/js/main.js"></script>  
     </head>
     <body>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('#user_birthday').datepicker();
-            })
-           
-        </script>
         <form class="form-horizontal" id="registerHere" method='post' action=''>
             <fieldset>
 
@@ -27,17 +22,17 @@
                     <div class="clr"></div> 
                     <div class="controls">
                         <label class="left">Yes</label>
-                        <input type="radio" val="yes" onclick="$('#cookies_input').hide();" class="left radio" name="cookies" />
+                        <input type="radio" value="yes"  class="left radio" name="cookies" />
                     </div>
                     <div class="clr"></div> 
                     <div class="controls">
                         <label class="left">No</label>
-                        <input type="radio" val="no" onclick="$('#cookies_input').hide();" class="left radio" name="cookies" />
+                        <input type="radio" value="no" class="left radio" name="cookies" />
                     </div>
                     <div class="clr"></div> 
                     <div class="controls">
                         <label class="left">Other</label>
-                        <input type="radio" val="other" onclick="$('#cookies_input').show();" class="left radio" name="cookies" />
+                        <input type="radio" value="other" class="left radio" name="cookies" />
                         <div class="clr"></div> 
                         <input type="text" class="input-xlarge" id="cookies_input" name="cookies_other" rel="popover"/>
                     </div>
