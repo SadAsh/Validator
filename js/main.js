@@ -151,8 +151,12 @@ function date(form_obj, options_obj){
     
     if(isValid)
         isValid =  /^(((0[1-9]|[12]\d|3[01])\/(0[13578]|1[02])\/((19|[2-9]\d)\d{2}))|((0[1-9]|[12]\d|30)\/(0[13456789]|1[012])\/((19|[2-9]\d)\d{2}))|((0[1-9]|1\d|2[0-8])\/02\/((19|[2-9]\d)\d{2}))|(29\/02\/((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))|)$/.test(form_obj.val());
-    if(isValid && options_obj.age_limit ){
-        
+   
+   if(isValid && options_obj.age_limit ){
+       var date = form_obj.val().split('/');
+      date = new Date(date[1]+'/'+date[0]+'/'+date[2]);
+      var age = (new Date().getTime() - date.getTime())/31556926/1000;
+      isValid =  age >options_obj.age_limit; 
     }
         
        
